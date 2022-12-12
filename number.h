@@ -44,7 +44,7 @@ public:
     bool operator&&(const Number &v);
     bool operator||(const Number &v);
     bool operator<(const Number &v);
-    bool operator<=>(const Number &v);
+    bool operator<=(const Number &v);
     bool operator>(const Number &v);
     bool operator>=(const Number &v);
     bool operator!=(const Number &v);
