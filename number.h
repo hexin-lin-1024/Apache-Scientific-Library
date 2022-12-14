@@ -201,7 +201,7 @@ Number::Number(std::string value)
     String group = val.substring(cursor, cursor += firstGroupLen);
     magnitude[numWords - 1] = Integer.parseInt(group, radix);
     if (magnitude[numWords - 1] < 0)
-        throw new NumberFormatException("Illegal digit");
+        throw "Illegal digit";
 
     // Process remaining digit groups
     int superRadix = intRadix[radix];
@@ -210,7 +210,7 @@ Number::Number(std::string value)
         group = val.substring(cursor, cursor += digitsPerInt[radix]);
         groupVal = Integer.parseInt(group, radix);
         if (groupVal < 0)
-            throw new NumberFormatException("Illegal digit");
+            throw "Illegal digit";
         destructiveMulAdd(magnitude, superRadix, groupVal);
     }
     // Required for cases where the array was overallocated.
